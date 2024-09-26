@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    /* Dark theme (left side of the image) */
+    --dark-primary: #F5C518;
+    --dark-text-primary: #E5E5E5;
+    --dark-text-secondary: #A9A9A9;
+    --dark-background-primary: #121212;
+    --dark-background-secondary: #1A1A1A;
+    --dark-background-tertiary: #242424;
+    --dark-accent: #1FBFB8;
+
+    /* Light theme (right side of the image) */
+    --light-primary: #F5C518;
+    --light-text-primary: #000000;
+    --light-text-secondary: #666666;
+    --light-background-primary: #FFFFFF;
+    --light-background-secondary: #F2F2F2;
+    --light-background-tertiary: #E0E0E0;
+    --light-accent: #1FBFB8;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -21,11 +41,11 @@ header {
     display: flex;
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--light-background-tertiary);
     position: fixed;
     top: 0px;
     z-index: 997;
-    background: #fff;
+    background: var(--light-background-primary);
 }
 
 header .left {
@@ -93,7 +113,7 @@ header .right button {
 
 .menuBar .menuArea {
     width: 60%;
-    background: #fff;
+    background: var(--light-background-primary);
     height: 100%;
     overflow-y: hidden;
 }
@@ -106,13 +126,13 @@ header .right button {
     scrollbar-width: 0px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid#ccc;
+    border-bottom: 1px solid var(--light-background-tertiary);
 }
 
 .menuBar .menuArea .menuItems .topMenu {
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid#ccc;
+    border-bottom: 1px solid var(--light-background-tertiary);
 }
 
 .menuBar .menuArea .menuItems .topMenu .left {
@@ -187,7 +207,7 @@ header .right button {
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background: #f6f6f6;
+    background: var(--light-background-secondary);
     border-radius: 6px;
 }
 
@@ -197,7 +217,7 @@ header .right button {
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background: #f6f6f6;
+    background: var(--light-background-secondary);
     align-items: center;
     justify-content: center;
 }
@@ -228,7 +248,7 @@ header .right button {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    background-color: #f6f6f6;
+    background-color: var(--light-background-secondary);
     border-radius: 6px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -271,34 +291,45 @@ header .right button {
 /* Menu Bar (Left to Right) */
 #mobileMenu {
     opacity: 0;
-    transform: translateX(-100%);  /* Move out of view to the left */
-    transition: transform 0.4s ease, opacity 0.4s ease;  /* Smooth animation */
-    visibility: hidden;  /* Initially hidden */
+    transform: translateX(-100%);
+    /* Move out of view to the left */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    /* Smooth animation */
+    visibility: hidden;
+    /* Initially hidden */
 }
 
 #mobileMenu.shown {
     opacity: 1;
-    transform: translateX(0);  /* Slide into view from left to right */
-    visibility: visible;  /* Make visible */
+    transform: translateX(0);
+    /* Slide into view from left to right */
+    visibility: visible;
+    /* Make visible */
 }
 
 /* Search Bar (Top to Down) */
 #searchBar {
     opacity: 0;
-    transform: translateY(-100%);  /* Move out of view upwards */
-    transition: transform 0.4s ease, opacity 0.4s ease;  /* Smooth animation */
-    visibility: hidden;  /* Initially hidden */
+    transform: translateY(-100%);
+    /* Move out of view upwards */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    /* Smooth animation */
+    visibility: hidden;
+    /* Initially hidden */
 }
 
 #searchBar.shown {
     opacity: 1;
-    transform: translateY(0);  /* Slide into view from top to bottom */
-    visibility: visible;  /* Make visible */
+    transform: translateY(0);
+    /* Slide into view from top to bottom */
+    visibility: visible;
+    /* Make visible */
 }
 
 /* General Hidden Class */
 .hidden {
     opacity: 0;
-    transform: translateX(-100%) translateY(-100%);  /* Keep out of view */
+    transform: translateX(-100%) translateY(-100%);
+    /* Keep out of view */
     visibility: hidden;
 }
