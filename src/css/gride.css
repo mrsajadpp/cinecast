@@ -35,84 +35,86 @@
   /* Maintain a 300x250 aspect ratio */
   position: relative;
   /* Position relative for title overlay */
-}
-
-.anime-item img {
-  width: 100%;
-  /* Ensure the image takes the full width of the item */
-  height: auto;
-  /* Maintain aspect ratio */
-  object-fit: cover;
-  /* Ensure images cover the grid item without stretching */
+  background: var(--light-background-secondary);
   border-radius: 6px;
 }
 
-.anime-item h3 {
-  margin: 0px;
-  /* Spacing around the title */
-  font-size: 13px;
-  /* Title font size */
-  color: var(--light-text-primary);
-  /* Title text color */
-  font-family: "Poppins", sans-serif;
-  /* Font family */
-  position: absolute;
-  /* Positioning the title */
-  bottom: 5px;
-  /* Distance from the bottom */
-  left: 5px;
-  /* Distance from the left */
-  /* Optional: background for better readability */
-  padding: 2px 5px;
-  /* Padding around the title */
-  border-radius: 4px;
-  /* Rounded corners for the background */
-}
-
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  .anime-grid {
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 columns on medium screens */
+  .anime-item img {
+    width: 100%;
+    /* Ensure the image takes the full width of the item */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure images cover the grid item without stretching */
+    border-radius: 6px;
   }
-}
 
-@media (max-width: 992px) {
-  .anime-grid {
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 columns on smaller screens */
+  .anime-item h3 {
+    margin: 0px;
+    /* Spacing around the title */
+    font-size: 13px;
+    /* Title font size */
+    color: var(--light-text-primary);
+    /* Title text color */
+    font-family: "Poppins", sans-serif;
+    /* Font family */
+    position: absolute;
+    /* Positioning the title */
+    bottom: 5px;
+    /* Distance from the bottom */
+    left: 5px;
+    /* Distance from the left */
+    /* Optional: background for better readability */
+    padding: 2px 5px;
+    /* Padding around the title */
+    border-radius: 4px;
+    /* Rounded corners for the background */
   }
-}
 
-@media (max-width: 768px) {
-  .anime-grid {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on tablets and smaller */
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1200px) {
+    .anime-grid {
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 columns on medium screens */
+    }
   }
-}
 
-@media (max-width: 480px) {
-  .anime-grid {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on mobile devices */
+  @media (max-width: 992px) {
+    .anime-grid {
+      grid-template-columns: repeat(3, 1fr);
+      /* 3 columns on smaller screens */
+    }
   }
-}
 
-.anime-item a {
-  display: block;
-  /* Make the anchor fill the item */
-  text-decoration: none;
-  /* Remove underline from links */
-  color: inherit;
-  /* Inherit text color */
-}
+  @media (max-width: 768px) {
+    .anime-grid {
+      grid-template-columns: repeat(2, 1fr);
+      /* 2 columns on tablets and smaller */
+    }
+  }
 
-.anime-item iframe {
-  width: 100%;
-  /* Make the iframe responsive */
-  height: 100%;
-  /* Maintain the aspect ratio */
-  overflow: hidden;
-  border-radius: 6px;
-}
+  @media (max-width: 480px) {
+    .anime-grid {
+      grid-template-columns: repeat(2, 1fr);
+      /* 2 columns on mobile devices */
+    }
+  }
+
+  .anime-item a {
+    display: block;
+    /* Make the anchor fill the item */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit text color */
+  }
+
+  .anime-item iframe {
+    width: 100%;
+    /* Make the iframe responsive */
+    height: 100%;
+    /* Maintain the aspect ratio */
+    overflow: hidden;
+    border-radius: 6px;
+  }
