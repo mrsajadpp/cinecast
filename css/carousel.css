@@ -14,7 +14,7 @@
     flex-direction: row;
     scroll-snap-type: x mandatory;  /* Enable snapping on horizontal scrolling */
     -webkit-overflow-scrolling: touch;  /* Smooth scrolling for mobile devices */
-    margin-top: 70px;
+    margin-top: 80px;
     border-radius: 6px;
 
 }
