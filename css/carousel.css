@@ -1,74 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Dark theme (left side of the image) */
+    --dark-primary: #F5C518;
+    --dark-text-primary: #E5E5E5;
+    --dark-text-secondary: #A9A9A9;
+    --dark-background-primary: #121212;
+    --dark-background-secondary: #1A1A1A;
+    --dark-background-tertiary: #242424;
+    --dark-accent: #1FBFB8;
+
+    /* Light theme (right side of the image) */
+    --light-primary: #F5C518;
+    --light-text-primary: #000000;
+    --light-text-secondary: #666666;
+    --light-background-primary: #FFFFFF;
+    --light-background-secondary: #F2F2F2;
+    --light-background-tertiary: #E0E0E0;
+    --light-accent: #1FBFB8;
+}
+
+
 .container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 .carousel {
-    width: 100%;  /* Change to full width */
-    max-width: 90%;  /* Keep it within 90% of the container */
+    width: 100%;
+    /* Change to full width */
+    max-width: 90%;
+    /* Keep it within 90% of the container */
     height: 200px;
-    overflow-x: scroll;  /* Enable horizontal scrolling */
-    overflow-y: hidden;  /* Disable vertical scrolling */
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    /* Disable vertical scrolling */
     display: flex;
     flex-direction: row;
-    scroll-snap-type: x mandatory;  /* Enable snapping on horizontal scrolling */
-    -webkit-overflow-scrolling: touch;  /* Smooth scrolling for mobile devices */
-    margin-top: 80px;  /* Space above the carousel */
+    scroll-snap-type: x mandatory;
+    /* Enable snapping on horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling for mobile devices */
+    /* Space above the carousel */
     border-radius: 6px;
 }
 
 .carousel::-webkit-scrollbar {
-    display: none;  /* Hide scrollbar */
+    display: none;
+    /* Hide scrollbar */
 }
 
 .carousel .scrollone {
-    flex-shrink: 0;  /* Prevent shrinking */
-    width: 100vw;  /* Set the width to 100% of the viewport */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    width: 100vw;
+    /* Set the width to 100% of the viewport */
     height: 100%;
     border-radius: 6px;
     overflow: hidden;
-    scroll-snap-align: start;  /* Snaps the image to the start of the viewport */
+    scroll-snap-align: start;
+    /* Snaps the image to the start of the viewport */
 }
 
 .carousel .scrollone img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Ensure the image covers the container without stretching */
+    object-fit: cover;
+    /* Ensure the image covers the container without stretching */
 }
 
 /* Anime Grid Styles */
 .anime-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);  /* 5 items per row for desktop */
-    gap: 16px;  /* Gap between grid items */
-    padding: 16px;  /* Same padding for grid container */
-    width: 100%;  /* Full width of container */
-    max-width: 90%;  /* Keep it within 90% of the container */
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 items per row for desktop */
+    gap: 16px;
+    /* Gap between grid items */
+    padding: 16px;
+    /* Same padding for grid container */
+    width: 100%;
+    /* Full width of container */
+    max-width: 90%;
+    /* Keep it within 90% of the container */
 }
 
 .anime-item {
-    overflow: hidden;  /* Prevent overflow for images */
-    aspect-ratio: 300 / 250;  /* Maintain a 300x250 aspect ratio */
+    overflow: hidden;
+    /* Prevent overflow for images */
+    aspect-ratio: 300 / 250;
+    /* Maintain a 300x250 aspect ratio */
 }
 
 .anime-item img {
-    width: 100%;  /* Ensure the image takes the full width of the item */
-    height: auto;  /* Maintain aspect ratio */
-    object-fit: cover;  /* Ensure images cover the grid item without stretching */
+    width: 100%;
+    /* Ensure the image takes the full width of the item */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure images cover the grid item without stretching */
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {  /* Tablet and smaller */
+@media (max-width: 768px) {
+
+    /* Tablet and smaller */
     .anime-grid {
-        grid-template-columns: repeat(2, 1fr);  /* 2 items per row for tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row for tablets */
     }
 }
 
-@media (max-width: 480px) {  /* Mobile */
+@media (max-width: 480px) {
+
+    /* Mobile */
     .anime-grid {
-        grid-template-columns: 1fr;  /* 1 item per row for mobile */
+        grid-template-columns: 1fr;
+        /* 1 item per row for mobile */
     }
+}
+
+.sectionTitle {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.sectionTitle span {
+    font-size: 17px;
+    border-left: 6px solid var(--light-primary);
+    padding-left: 10px;
 }
