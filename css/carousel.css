@@ -8,15 +8,14 @@
 .carousel {
     width: 90%;
     height: 200px;
-    overflow-x: scroll;  /* Enable horizontal scrolling */
-    overflow-y: hidden;  /* Disable vertical scrolling */
+    overflow: hidden;  /* Disable manual scrolling */
     display: flex;
     flex-direction: row;
     scroll-snap-type: x mandatory;  /* Enable snapping on horizontal scrolling */
     -webkit-overflow-scrolling: touch;  /* Smooth scrolling for mobile devices */
     margin-top: 70px;
     border-radius: 6px;
-
+    pointer-events: none; /* Disable all pointer events to prevent manual scroll */
 }
 
 .carousel::-webkit-scrollbar {
