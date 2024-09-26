@@ -161,6 +161,113 @@ header .right button {
     color: #000;
 }
 
+/* Mobile Search */
+
+.searchBar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 65px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.searchBar .searchArea {
+    width: 89%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBar .searchArea .searchInp {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background: #f6f6f6;
+    border-radius: 6px;
+}
+
+.searchBar .searchArea .searchInp form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background: #f6f6f6;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar .searchArea .searchInp button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.searchBar .searchArea .searchInp input {
+    width: calc(100% - 50px);
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding-left: 15px;
+    display: flex;
+    font-size: 15px;
+}
+
+.searchBar .searchArea .suggestions {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.searchBar .searchArea .suggestions .suggestion {
+    width: 100%;
+    height: 50px;
+}
+
+.searchBar .searchArea .suggestions .suggestion a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+}
+
+.searchBar .searchArea .suggestions .suggestion a .suggesIcon {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar .searchArea .suggestions .suggestion a .suggestText {
+    width: calc(100% - 50px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #000;
+    font-size: 15px;
+}
+
 .hidden {
     display: none !important;
 }
