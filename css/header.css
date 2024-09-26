@@ -193,6 +193,7 @@ header .right button {
     justify-content: center;
     padding-top: 20px;
     background-color: var(--light-background-primary);
+    z-index: 996;
 }
 
 .searchBar .searchArea {
