@@ -178,7 +178,7 @@ header .right button {
     align-items: center;
     justify-content: start;
     width: calc(100% - 50px);
-    color: #000;
+    color: var(--light-text-primary);
 }
 
 /* Mobile Search */
@@ -284,7 +284,7 @@ header .right button {
     display: flex;
     align-items: center;
     justify-content: start;
-    color: #000;
+    color: var(--light-text-primary);
     font-size: 15px;
 }
 
