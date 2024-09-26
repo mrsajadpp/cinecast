@@ -209,8 +209,7 @@ button {
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background: var(--light-background-secondary);
-    border-radius: 6px;
+    border: 1px solid var(--light-background-secondary);
 }
 
 .searchBar .searchArea .searchInp form {
@@ -219,23 +218,22 @@ button {
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background: var(--light-background-secondary);
     align-items: center;
     justify-content: center;
 }
 
 .searchBar .searchArea .searchInp button {
     width: 50px;
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: transparent;
+    background: var(--light-background-secondary);
 }
 
 .searchBar .searchArea .searchInp input {
-    width: calc(100% - 50px);
+    width: calc(100% - 60px);
     height: 100%;
     border: none;
     background-color: transparent;
@@ -250,15 +248,16 @@ button {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    background-color: var(--light-background-secondary);
-    border-radius: 6px;
     overflow-x: hidden;
     overflow-y: scroll;
+    display: none;
 }
 
 .searchBar .searchArea .suggestions .suggestion {
     width: 100%;
     height: 50px;
+    margin-top: 5px;
+    background-color: var(--light-background-secondary);
 }
 
 .searchBar .searchArea .suggestions .suggestion a {
