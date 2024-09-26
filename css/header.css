@@ -268,6 +268,37 @@ header .right button {
     font-size: 15px;
 }
 
+/* Menu Bar (Left to Right) */
+#mobileMenu {
+    opacity: 0;
+    transform: translateX(-100%);  /* Move out of view to the left */
+    transition: transform 0.4s ease, opacity 0.4s ease;  /* Smooth animation */
+    visibility: hidden;  /* Initially hidden */
+}
+
+#mobileMenu.shown {
+    opacity: 1;
+    transform: translateX(0);  /* Slide into view from left to right */
+    visibility: visible;  /* Make visible */
+}
+
+/* Search Bar (Top to Down) */
+#searchBar {
+    opacity: 0;
+    transform: translateY(-100%);  /* Move out of view upwards */
+    transition: transform 0.4s ease, opacity 0.4s ease;  /* Smooth animation */
+    visibility: hidden;  /* Initially hidden */
+}
+
+#searchBar.shown {
+    opacity: 1;
+    transform: translateY(0);  /* Slide into view from top to bottom */
+    visibility: visible;  /* Make visible */
+}
+
+/* General Hidden Class */
 .hidden {
-    display: none !important;
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);  /* Keep out of view */
+    visibility: hidden;
 }
