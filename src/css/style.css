@@ -41,7 +41,7 @@ button {
     display: flex;
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid var(--light-background-tertiary);
+    border-bottom: 1px solid var(--light-background-secondary);;
     position: fixed;
     top: 0px;
     z-index: 997;
@@ -126,13 +126,13 @@ button {
     scrollbar-width: 0px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid var(--light-background-tertiary);
+    border-bottom: 1px solid var(--light-background-secondary);;
 }
 
 .menuBar .menuArea .menuItems .topMenu {
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid var(--light-background-tertiary);
+    border-bottom: 1px solid var(--light-background-secondary);;
 }
 
 .menuBar .menuArea .menuItems .topMenu .left {
@@ -466,6 +466,96 @@ button {
 
 ul {
     padding: 10px
+}
+
+/* Desktop Header */
+
+.desktop-header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-bottom: 1px solid var(--light-background-secondary);;
+    position: fixed;
+    top: 0px;
+    background-color: var(--light-background-primary);
+    z-index: 997;
+}
+
+.desktop-header .logo {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 15px;
+}
+
+.desktop-header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.desktop-header .logo a img {
+    width: 150px;
+}
+
+.desktop-header .menu {
+    width: calc(100% - (250px + 350px));
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.desktop-header .menu .menuItem {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-header .menu .menuItem a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text-primary);
+}
+
+.desktop-header .search {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-header .search form {
+    width: 90%;
+    height: 60%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--light-background-secondary);
+}
+
+.desktop-header .search form input {
+    height: 100%;
+    width: calc(100% - 60px);
+    border: none;
+    padding-left: 10px;
+    color: var(--light-text-secondary);
+}
+
+.desktop-header .search form button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    background: var(--light-background-secondary);
 }
 
 /* Hide desktop header on mobile */
