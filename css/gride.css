@@ -107,3 +107,12 @@
   color: inherit;
   /* Inherit text color */
 }
+
+.anime-item iframe {
+  width: 100%;
+  /* Make the iframe responsive */
+  height: 100%;
+  /* Maintain the aspect ratio */
+  overflow: hidden;
+  border-radius: 6px;
+}
