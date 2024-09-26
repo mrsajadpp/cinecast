@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+input,
+button {
+    outline: none;
+}
+
+/* Mobile Header */
+
+header {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0px;
+    z-index: 997;
+    background: #fff;
+}
+
+header .left {
+    width: 70px;
+    height: 100%;
+}
+
+header .left button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+header .logo {
+    width: calc(100% - (70px + 70px));
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+header .logo a img {
+    width: 140px;
+}
+
+header .right {
+    width: 70px;
+    height: 100%;
+}
+
+header .right button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+
+.menuBar {
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(116, 116, 116, 0.61);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.menuBar .menuArea {
+    width: 60%;
+    background: #fff;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.menuBar .menuArea .menuItems {
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: 0px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid#ccc;
+}
+
+.menuBar .menuArea .menuItems .topMenu {
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid#ccc;
+}
+
+.menuBar .menuArea .menuItems .topMenu .left {
+    width: 70px;
+    height: 100%;
+}
+
+.menuBar .menuArea .menuItems .topMenu .left button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menuBar .menuArea .menuItems .menuItem {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+}
+
+.menuBar .menuArea .menuItems .menuItem a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+}
+
+.menuBar .menuArea .menuItems .menuItem a .menuIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.menuBar .menuArea .menuItems .menuItem a .menuText {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: calc(100% - 50px);
+    color: #000;
+}
