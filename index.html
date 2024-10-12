@@ -9,6 +9,8 @@
         content="Join our premium platform for adult content. Upload, share, and discover exclusive nude photography and adult images in a secure environment.">
     <meta name="keywords"
         content="adult content, 18+ nude photography, pornographic images, upload nude photos, adult photos, exclusive adult content, erotic images, nude galleries">
+    <meta name="rating" content="Adults" />
+    <meta name="adult-content" content="yes" />
     <link rel="icon" href="https://www.cinecast.xyz/src/img/cinecast-favicon.png" type="image/png">
     <link rel="shortcut icon" href="https://www.cinecast.xyz/src/img/cinecast-favicon.png" type="image/png">
     <!-- Link to Google Fonts for Poppins -->
@@ -41,7 +43,30 @@
             height: auto;
         }
 
-        /* Menu Bar Styles */
+        /* Warning Modal Styles */
+        .warning-modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .warning-content {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+
         .menu {
             background-color: #F5C518;
             color: white;
@@ -122,6 +147,15 @@
 
 <body>
 
+    <!-- Warning Modal -->
+    <div class="warning-modal" id="warningModal">
+        <div class="warning-content">
+            <h2>Warning</h2>
+            <p>This website contains adult content. You must be 18 years or older to enter.</p>
+            <button id="acceptButton">I am 18 or older</button>
+        </div>
+    </div>
+
     <!-- Header -->
     <div class="header">
         <img src="./src/img/cinecast.webp" alt="Your Hub for Exclusive 18+ Content">
@@ -169,6 +203,21 @@
         &copy; 2024 CineCast.xyz. All Rights Reserved.
     </footer>
 
+    <script>
+        // Check if the user has accepted the warning before
+        if (!localStorage.getItem('ageAccepted')) {
+            // Show the warning modal
+            document.getElementById('warningModal').style.display = 'flex';
+        }
+
+        // Add event listener to the accept button
+        document.getElementById('acceptButton').addEventListener('click', function () {
+            // Set local storage item to indicate acceptance
+            localStorage.setItem('ageAccepted', 'true');
+            // Hide the warning modal
+            document.getElementById('warningModal').style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
